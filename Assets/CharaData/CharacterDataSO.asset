@@ -12,3 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cfe1bea44f0ed14a956f411713e7ceb, type: 3}
   m_Name: CharacterDataSO
   m_EditorClassIdentifier: 
+  characterDataList:
+  - charaName: Player
+    obj: {fileID: 0}
+    hp: 10
+    speed: 5
+  - charaName: Enemy1
+    obj: {fileID: 4708080333345570714, guid: 82953efd0b945e4428e4659183fc5afe, type: 3}
+    hp: 10
+    speed: 3
