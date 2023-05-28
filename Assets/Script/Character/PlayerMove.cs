@@ -31,7 +31,7 @@ public class PlayerMove : MonoBehaviour
     /// </summary>
     private void MovePlayer()
     {
-        if (!Input.anyKey) return;
+        if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0) return;
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -45,9 +45,6 @@ public class PlayerMove : MonoBehaviour
 
         //Rigidbody‚Å‚ÌˆÚ“®
         //rigid.AddForce(transform.TransformDirection(movement) * speed);
-
-        //•¨—–³‹ˆÚ“®
-       // rigid.MovePosition(rigid.position + transform.TransformDirection(movement) );
 
     }
 
