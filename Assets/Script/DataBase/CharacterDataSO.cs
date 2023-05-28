@@ -5,13 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "CharacterDataSO", menuName = " Create CharacterDataSO")]
 public class CharacterDataSO : ScriptableObject
 {
-    public List<CharacterData> objrctDataList = new List<CharacterData>();
+    public List<CharacterData> characterDataList = new List<CharacterData>();
 }
 
 [System.Serializable]
 public class CharacterData
 {
-    public string name;
+    public string charaName;
+
+    public CharacterStatus obj;
 
     public int hp;
 
