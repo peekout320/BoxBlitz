@@ -13,7 +13,11 @@ public class Presenter : MonoBehaviour
 
     private void Start()
     {
-        uiModel.currentAtb
-            .Subscribe(x => uiView.ViewAtbGauge(x));      
+        for (int i = 0; i < uiModel.currentAtb.Length; i++)
+        {
+            int index = i; @//•Ï”‚É“ü‚ê‚È‚¨‚³‚È‚¢‚ÆƒGƒ‰[‚ª‚Å‚é
+            uiModel.currentAtb[index]
+                .Subscribe(x => uiView.ViewAtbGauge(x , index));
+        }
     }
 }

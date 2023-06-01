@@ -9,8 +9,6 @@ public class CharacterStatus : MonoBehaviour
 {
     public string CharaName;
 
-    public CharacterStatus obj;
-
     public int hp;
 
     public float speed;

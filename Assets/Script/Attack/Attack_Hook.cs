@@ -13,14 +13,14 @@ public class Attack_Hook : AttackBase
     {
         attackName = "Hook";
         attackPower = 3f;
-        attackInterval = 4f;
+        attackInterval = 0.3f;
     }
 
     /// <summary>
     /// 攻撃を開始するクラスを継承
     /// </summary>
-    public override void StartAttack()
+    public override void StartAttack(Animator animator)
     {
-        base.StartAttack();
+        base.StartAttack(animator);
     }
 }

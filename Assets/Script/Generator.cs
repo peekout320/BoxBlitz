@@ -22,15 +22,11 @@ public class Generator : MonoBehaviour
 
         Enemy enemyInfo = enemy.GetComponent<Enemy>();
 
-        //AttackManager‚ğ¶¬‚µ‚½enemy‚É•t—^
+        //AttackManager‚ğ•t—^
         enemyInfo.SetupAttackManager(attackManager);
 
         //ƒpƒ‰ƒ[ƒ^‚ğ“o˜^
         SettingParameter(enemy,index);
-
-        //UŒ‚ƒpƒ^[ƒ“‚ğ“o˜^
-        attackManager.attackList.Add(enemyInfo.AttackStraight);
-        attackManager.attackList.Add(enemyInfo.AttackHook);
     }
 
     /// <summary>
@@ -41,7 +37,6 @@ public class Generator : MonoBehaviour
     private void SettingParameter(CharacterStatus chara,int index)
     {
         chara.CharaName = DataBaseManager.instance.characterDataSO.characterDataList[index].charaName;
-        chara.obj = DataBaseManager.instance.characterDataSO.characterDataList[index].obj;
         chara.hp = DataBaseManager.instance.characterDataSO.characterDataList[index].hp;
         chara.speed = DataBaseManager.instance.characterDataSO.characterDataList[index].speed;
     }
