@@ -6,16 +6,7 @@ using Cysharp.Threading.Tasks;
 
 public class Enemy : CharacterStatus
 {
-    [SerializeField]
-    private Attack_Straight attackStraight;
-    public Attack_Straight AttackStraight { get => attackStraight; }
-
-    [SerializeField]
-    private Attack_Hook attackHook;
-    public Attack_Hook AttackHook { get => attackHook; }
-
     private AttackManager attackManager;
-
 
     async void Start()
     {
@@ -39,14 +30,14 @@ public class Enemy : CharacterStatus
     {
         while (true)
         {
-            // attackListからランダムで攻撃パターンを選ぶための数値を決める
+            // attackListからランダムで攻撃を選ぶための数値
             int attackNumber = UnityEngine.Random.Range(0, attackManager.attackList.Count);
 
             Debug.Log("攻撃パターン"  +  attackNumber);
 
             // 攻撃の処理を行う
             if (attackManager.attackList == null) return;
-            attackManager.attackList[attackNumber].StartAttack();
+            attackManager.attackList[attackNumber].StartAttack(attackAnimator);
 
             // attackIntervalで指定した秒数待機する。
             await UniTask.Delay(TimeSpan.FromSeconds(attackManager.attackList[attackNumber].attackInterval));

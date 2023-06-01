@@ -18,15 +18,12 @@ public abstract class AttackBase : MonoBehaviour
     [SerializeField]
     public float attackInterval;
 
-    [SerializeField]
-    protected Animator attackAnimator;
-
 
     /// <summary>
     /// attackNameで指定した攻撃アニメーションを実行する。子クラスに継承。
     /// </summary>
     /// <param name="attackName"></param>
-    public virtual void StartAttack()
+    public virtual void StartAttack(Animator attackAnimator)
     {
         if (!attackAnimator) return;
         attackAnimator.SetTrigger(attackName);

@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// AttackBaseを継承し攻撃の1つの ”ストレート” を実行するクラス
+/// AttackBaseを継承し攻撃の1つの ”アッパー” を実行するクラス
 /// プロパティをインスペクター上で設定する仕様にすると、子クラスのスクリプト上で内容が視認できなくなるので、今回はコンストラクタで初期化する。
 /// </summary>
-public class Attack_Straight : AttackBase
+public class Attack_Upper : AttackBase
 {
     //コンストラクタ
-    public Attack_Straight()
+    public Attack_Upper()
     {
-        attackName = "Straight";
-        attackPower = 3f;
-        attackInterval = 0.2f;
+        attackName = "Upper";
+        attackPower = 5f;
+        attackInterval = 0.4f;
     }
 
     /// <summary>
