@@ -17,7 +17,7 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Observable.EveryFixedUpdate()
+        Observable.EveryUpdate()
             .Subscribe(_ =>
             {
                 MovePlayer();

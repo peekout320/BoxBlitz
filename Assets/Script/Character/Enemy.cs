@@ -40,7 +40,7 @@ public class Enemy : CharacterStatus
             attackManager.attackList[attackNumber].StartAttack(attackAnimator);
 
             // attackInterval‚Åw’è‚µ‚½•b”‘Ò‹@‚·‚éB
-            await UniTask.Delay(TimeSpan.FromSeconds(attackManager.attackList[attackNumber].attackInterval));
+            await UniTask.Delay(TimeSpan.FromSeconds(attackManager.attackList[attackNumber].attackInterval * 10));
         }
     }
 }
